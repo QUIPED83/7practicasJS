@@ -1,0 +1,33 @@
+<html>
+<body>
+    hoy es <script type="text/javascript">
+var d=new Date();
+var mes=new Array(12);
+    var dia=new Array(12);
+mes[0]="enero";
+mes[1]="febrero";
+mes[2]="marzo";
+mes[3]="abril";
+mes[4]="mayo";
+mes[5]="junio";
+mes[6]="julio";
+mes[7]="agosto";
+mes[8]="septiembre";
+mes[9]="octubre";
+mes[10]="noviembre";
+mes[11]="diciembre";
+    dia[0]="domingo";
+    dia[1]="lunes";
+    dia[2]="martes";
+    dia[3]="miercoles";
+    dia[4]="jueves";
+    dia[5]="viernes";
+    dia[6]="sabado";
+document.write(dia[d.getDay()], " " );
+document.write(d.getDate()," ");
+document.write(mes[d.getMonth()]);
+document.write(" de ",d.getFullYear());
+document.write(" <br> son las ",d.getHours(),":",d.getMinutes(),":",d.getSeconds());
+</script>   
+</body>
+</html>

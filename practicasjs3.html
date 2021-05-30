@@ -1,0 +1,49 @@
+<html>
+<body>
+ <script>
+    var dato =prompt("Introduzca la frase:");
+    var vector =dato.split(" ");
+    var reves = "";
+    
+     
+    document.write("Frase: " + dato+"<br>"); 
+    document.write("Numero de palabras: "+ vector.length); 
+    document.write("<br>Primera palabra: "+ vector[0]);
+    document.write("<br>Ultima palabra: "+ vector[vector.length-1]+"<br>");
+    //Palabras en orden inverso
+    for(var i=vector.length-1; i>=0 ;i--){
+    document.write(vector[i]+" ");
+    }
+    //Palabras ordenadas de la A a la Z
+    document.write("<br>");
+    vector.sort();
+    for(var i=0; i<vector.length;i++){
+    document.write(vector[i]+" ");
+    }
+    //palabras ordenadas de la Z a la A
+    document.write("<br>");
+    vector.reverse();
+    for(var i=0; i<vector.length;i++){
+    document.write(vector[i]+" ");
+    }
+    //Palindromo
+     document.write("<br>");
+    var vector2 =dato.split(" ");
+    var cadenajunta="",cadenajuntareversa="";
+     
+    for(var i=0;i<vector2.length;i++){
+        cadenajunta=cadenajunta+vector[i];
+    }
+
+    for(var i=cadenajunta.length-1;i>=0;i--){
+        cadenajuntareversa = cadenajuntareversa + cadenajunta.charAt(i);
+    }
+     if(cadenajuntareversa == cadenajunta){
+        document.write("es un PALINDROMO");
+        }else{
+        document.write("No es palindromo");
+        }
+ </script>
+
+</body>
+</html>

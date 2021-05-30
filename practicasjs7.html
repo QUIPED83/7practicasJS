@@ -1,0 +1,63 @@
+<html>
+    <script>
+        
+        function mandardato(){
+           var vector = ["Apellidos","Nombre","E-Mail","Contraseña"];
+            formulario(vector);
+        }
+        
+    function formulario(vector){
+        
+        var form = document.getElementById("form1");
+//elemento apellidos
+  var x = document.createElement("p");
+  var t = document.createTextNode(vector[0]+":");
+  x.appendChild(t);
+  form.appendChild(x);
+        
+  var x = document.createElement("INPUT"); 
+  x.setAttribute("type", "text");
+  form.appendChild(x);
+  form.appendChild(document.createElement("br")); 
+        
+       //elemento nombre 
+    x = document.createElement("p");
+  t = document.createTextNode(vector[1]+":");
+  x.appendChild(t);
+  form.appendChild(x);
+        
+        var x1 = document.createElement("INPUT"); 
+  x1.setAttribute("type", "text");
+  form.appendChild(x1);
+        form.appendChild(document.createElement("br"));  
+        
+        //elemento email
+        x = document.createElement("p");
+  t = document.createTextNode(vector[2]+":");
+  x.appendChild(t);
+  form.appendChild(x);
+        
+        var x2 = document.createElement("INPUT"); 
+  x2.setAttribute("type", "text");
+  form.appendChild(x2);
+        form.appendChild(document.createElement("br"));  
+        
+        //elemento contraseña
+        x = document.createElement("p");
+  t = document.createTextNode(vector[1]+":");
+  x.appendChild(t);
+  form.appendChild(x);
+        
+        var x3 = document.createElement("INPUT"); 
+  x3.setAttribute("type", "password");
+  form.appendChild(x3);
+    }
+    </script>
+
+<body onload="mandardato()">
+    <form id="form1">
+       
+    </form>
+    <input type="submit" value="Enviar datos">
+</body>
+</html>

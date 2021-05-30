@@ -1,0 +1,30 @@
+<html>
+    <script>
+    function arbol(nodo){
+        //Contador der los elementos h2 existentes
+        var list = document.getElementsByTagName("h2");
+        alert("la cantidad de elementos h2 son: "+ list.length);
+        
+        //Cambiar contenido del penultimo h2
+        document.getElementsByTagName("h2")[list.length-2].innerHTML= "El nuevo tercer h2 despues de convertirse en h1";
+        
+        //Convertir h2 en un h1
+       
+       list[list.length-2].outerHTML = "<h1>"+list[list.length-2].textContent+"</h1>";
+        
+        //Cambiar la imagen de todo el documento
+        var list2 = document.getElementsByTagName("img");
+        for(var i=0;i<list2.length;i++){
+        list2[i].setAttribute("src", "kyu.jpg");}  
+    }
+    </script>
+<body onload="arbol(document.body)">
+    <h1>Practica 6, esta es una etiqueta h1</h1>
+    <h2>Esta es una etiqueta h2</h2>
+    <img src="salsa.png" width="50" height="50">
+    <h2>La segudna etiqueta h2 es esta y se convirtió en h1</h2>
+    <img src="salsa.png" width="50" height="50">
+    <h2>El tercer h2</h2>
+    <img src="salsa.png" width="50" height="50">
+</body>
+</html>

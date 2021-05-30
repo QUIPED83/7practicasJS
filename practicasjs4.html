@@ -1,0 +1,36 @@
+<html>
+<body>
+ <script>
+     var cadena =prompt("Introduzca el DNI:");
+     var num;
+     var res=0;
+     var verificar;
+    cadena.toLowerCase;
+     //comprobar que el ultimo sea una letra
+     if(cadena.charCodeAt(cadena.length-1) < 123 && cadena.charCodeAt(cadena.length-1) > 96){
+         verificar = true;
+     }else{
+         verificar = false;
+     }
+     //comprobar que el resto sea numero y resultado del modulo
+     if(verificar==true){
+     num=cadena.split(cadena.charAt(cadena.length-1));
+         if(num[0] > 1 && num[0] < 99999999){
+             res = num[0] % 23;
+             verificar = false;
+         }
+     
+     
+     for(var i=0;i<23;i++){
+         if(i==res){
+         verificar = true;
+        }
+     }
+     }
+    alert(verificar);
+     
+     
+    </script>
+
+</body>
+</html>
